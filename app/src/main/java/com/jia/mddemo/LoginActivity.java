@@ -117,6 +117,11 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
             et_email.setError("手机格式错误");
             return;
         }
+        if (TextUtils.isEmpty(password)) {
+            et_password.setError("密码为空");
+            return;
+        }
+
 
     }
 
