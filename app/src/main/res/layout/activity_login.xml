@@ -47,7 +47,7 @@
                     android:layout_height="wrap_content"
                     android:imeActionId="@+id/et_password"
                     android:imeOptions="actionNext"
-                    android:inputType="phone"
+                    android:inputType="textEmailAddress"
                     android:maxLines="1"
                     android:singleLine="true" />
 

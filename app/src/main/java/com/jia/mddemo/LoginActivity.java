@@ -1,5 +1,9 @@
 package com.jia.mddemo;
 
+import android.content.Context;
+import android.content.Intent;
+import android.os.Handler;
+import android.os.Message;
 import android.support.design.widget.TextInputLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -36,7 +40,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
     // 加载中
     private ProgressBar pb_login;
 
-    private String phone;
+    private String email;
 
     private String password;
 
@@ -46,10 +50,33 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
 
     private List<String> list = new ArrayList<>();
 
+    private int progress=10;
+
+    private Context mContext;
+
+    private Handler mHandler=new Handler(){
+        @Override
+        public void handleMessage(Message msg) {
+            super.handleMessage(msg);
+            if(msg.what==1){
+                progress=progress+30;
+                pb_login.setProgress(progress);
+                if(progress>=100){
+                    startActivity(new Intent(mContext,MainActivity.class));
+                    finish();
+                }else {
+                    mHandler.sendEmptyMessageDelayed(1,1000);
+                }
+            }
+        }
+    };
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
+
+        mContext=LoginActivity.this;
 
         // 邮箱
         til_email = (TextInputLayout) findViewById(R.id.til_email);
@@ -73,14 +100,13 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
 
             @Override
             public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
-                if (i2 != 0) {
+                if(charSequence.toString().contains("@")){
                     list.clear();
-                    list.add(charSequence + "@qq.com");
-                    list.add(charSequence + "@163.com");
+                    list.add(charSequence + "qq.com");
+                    list.add(charSequence + "163.com");
                     arrayAdapter = new ArrayAdapter<String>(LoginActivity.this, android.R.layout.simple_list_item_1, list);
                     et_email.setAdapter(arrayAdapter);
                 }
-
             }
 
             @Override
@@ -106,15 +132,16 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
      * 登录方法
      */
     private void login() {
-        phone = et_email.getText().toString();
+
+        email = et_email.getText().toString();
         password = et_password.getText().toString();
 
-        if (TextUtils.isEmpty(phone)) {
-            et_email.setError("手机号为空");
+        if (TextUtils.isEmpty(email)) {
+            et_email.setError("邮箱为空");
             return;
         }
-        if (!checkMobileNumber(et_email.getText().toString())) {
-            et_email.setError("手机格式错误");
+        if (!email.contains("@")) {
+            et_email.setError("邮箱格式错误");
             return;
         }
         if (TextUtils.isEmpty(password)) {
@@ -122,7 +149,10 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
             return;
         }
 
+        pb_login.setVisibility(View.VISIBLE);
+        pb_login.setProgress(progress);
 
+        mHandler.sendEmptyMessageDelayed(1,1000);
     }
 
 
