@@ -41,7 +41,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         toolbar.setNavigationOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Snackbar.make(view, "导航图标", Snackbar.LENGTH_LONG).setAction("Action", null).show();
+                Snackbar.make(view, "导航图标", Snackbar.LENGTH_LONG).setAction("关闭哦", new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+
+                    }
+                }).show();
             }
         });
 
