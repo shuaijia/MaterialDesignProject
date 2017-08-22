@@ -4,6 +4,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.os.Handler;
 import android.os.Message;
+import android.support.design.widget.Snackbar;
 import android.support.design.widget.TextInputLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -51,22 +52,22 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
 
     private List<String> list = new ArrayList<>();
 
-    private int progress=10;
+    private int progress = 10;
 
     private Context mContext;
 
-    private Handler mHandler=new Handler(){
+    private Handler mHandler = new Handler() {
         @Override
         public void handleMessage(Message msg) {
             super.handleMessage(msg);
-            if(msg.what==1){
-                progress=progress+30;
+            if (msg.what == 1) {
+                progress = progress + 30;
                 pb_login.setProgress(progress);
-                if(progress>=100){
-                    startActivity(new Intent(mContext,MainActivity.class));
+                if (progress >= 100) {
+                    startActivity(new Intent(mContext, MainActivity.class));
                     finish();
-                }else {
-                    mHandler.sendEmptyMessageDelayed(1,1000);
+                } else {
+                    mHandler.sendEmptyMessageDelayed(1, 1000);
                 }
             }
         }
@@ -77,7 +78,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
 
-        mContext=LoginActivity.this;
+        mContext = LoginActivity.this;
 
         // 邮箱
         til_email = (TextInputLayout) findViewById(R.id.til_email);
@@ -101,7 +102,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
 
             @Override
             public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
-                if(charSequence.toString().contains("@")){
+                if (charSequence.toString().contains("@")) {
                     list.clear();
                     list.add(charSequence + "qq.com");
                     list.add(charSequence + "163.com");
@@ -153,9 +154,9 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
         pb_login.setVisibility(View.VISIBLE);
         pb_login.setProgress(progress);
 
-        mHandler.sendEmptyMessageDelayed(1,1000);
-        InputMethodManager imm =  (InputMethodManager)getSystemService(Context.INPUT_METHOD_SERVICE);
-        if(imm != null) {
+        mHandler.sendEmptyMessageDelayed(1, 1000);
+        InputMethodManager imm = (InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE);
+        if (imm != null) {
             imm.hideSoftInputFromWindow(getWindow().getDecorView().getWindowToken(), 0);
         }
     }

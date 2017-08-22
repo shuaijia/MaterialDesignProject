@@ -1,11 +1,16 @@
 package com.jia.mddemo;
 
+import android.content.Intent;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
+import android.support.design.widget.NavigationView;
 import android.support.design.widget.Snackbar;
+import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
+import android.view.Gravity;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -19,6 +24,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     private RecyclerView rv_main;
 
+    private NavigationView nav_view;
+
+    private DrawerLayout drawer;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -28,6 +37,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         toolbar = (Toolbar) findViewById(R.id.toolbar);
         rv_main= (RecyclerView) findViewById(R.id.rv_main);
         fab = (FloatingActionButton) findViewById(R.id.fab);
+        nav_view= (NavigationView) findViewById(R.id.nav_view);
+        drawer= (DrawerLayout) findViewById(R.id.drawer);
+
+
 
 //      toolbar.setLogo(R.mipmap.ic_launcher);
         toolbar.setNavigationIcon(R.mipmap.ic_menu);//设置导航的图标
@@ -41,12 +54,19 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         toolbar.setNavigationOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Snackbar.make(view, "导航图标", Snackbar.LENGTH_LONG).setAction("关闭哦", new View.OnClickListener() {
-                    @Override
-                    public void onClick(View view) {
-
-                    }
-                }).show();
+//                Snackbar snackbar=Snackbar.make(view,"提示",Snackbar.LENGTH_LONG);
+//                snackbar.setAction("关闭", new View.OnClickListener() {
+//                    @Override
+//                    public void onClick(View view) {
+//
+//                    }
+//                });
+//                // 设置右侧Action按钮颜色
+//                snackbar.setActionTextColor(Color.RED);
+//                // 设置提示框背景色
+//                snackbar.getView().setBackgroundColor(Color.BLUE);
+//                snackbar.show();
+                drawer.openDrawer(Gravity.LEFT);
             }
         });
 

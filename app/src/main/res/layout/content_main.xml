@@ -18,18 +18,18 @@
         android:layout_height="10dp"
         />
 
-    <android.support.v7.widget.CardView
-        android:layout_width="match_parent"
-        android:layout_height="150dp"
-        app:cardBackgroundColor="#586000"
-        app:cardCornerRadius="5dp"
-        app:cardElevation="3dp">
+    <!--<android.support.v7.widget.CardView-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="150dp"-->
+        <!--app:cardBackgroundColor="#586000"-->
+        <!--app:cardCornerRadius="5dp"-->
+        <!--app:cardElevation="3dp">-->
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="我爱北京天安门"
-            android:layout_gravity="center_horizontal" />
-    </android.support.v7.widget.CardView>
+        <!--<TextView-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:text="我爱北京天安门"-->
+            <!--android:layout_gravity="center_horizontal" />-->
+    <!--</android.support.v7.widget.CardView>-->
 
 </RelativeLayout>
