@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="@dimen/nav_header_height"
+    android:layout_height="200dp"
     android:background="@drawable/side_nav_bar"
     android:gravity="bottom"
     android:orientation="vertical"
@@ -21,8 +21,8 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Shuai Jia"
         android:layout_marginTop="5dp"
+        android:text="Shuai Jia"
         android:textAppearance="@style/TextAppearance.AppCompat.Body2" />
 
     <TextView
@@ -30,5 +30,11 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="https://github.com/shuaijia" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="http://blog.csdn.net/jiashuai94" />
 
 </LinearLayout>

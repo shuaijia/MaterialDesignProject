@@ -1,5 +1,6 @@
 package com.jia.mddemo;
 
+import android.content.Context;
 import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
@@ -28,24 +29,32 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     private DrawerLayout drawer;
 
+    private Context mContext;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         supportRequestWindowFeature(Window.FEATURE_NO_TITLE);
         setContentView(R.layout.activity_main);
 
+        mContext=MainActivity.this;
+
         toolbar = (Toolbar) findViewById(R.id.toolbar);
-        rv_main= (RecyclerView) findViewById(R.id.rv_main);
+        rv_main = (RecyclerView) findViewById(R.id.rv_main);
         fab = (FloatingActionButton) findViewById(R.id.fab);
-        nav_view= (NavigationView) findViewById(R.id.nav_view);
-        drawer= (DrawerLayout) findViewById(R.id.drawer);
+        nav_view = (NavigationView) findViewById(R.id.nav_view);
+        drawer = (DrawerLayout) findViewById(R.id.drawer);
 
 
-
-//      toolbar.setLogo(R.mipmap.ic_launcher);
-        toolbar.setNavigationIcon(R.mipmap.ic_menu);//设置导航的图标
+        //设置App图标
+//        toolbar.setLogo(R.mipmap.ic_launcher);
+        //设置导航的图标
+        toolbar.setNavigationIcon(R.mipmap.ic_menu);
+        // 设置主标题
         toolbar.setTitle("J++");
-//      toolbar.setSubtitle("MaterialDesign");
+        // 设置子标题
+//        toolbar.setSubtitle("MaterialDesign");
+
         setSupportActionBar(toolbar);
 
 
@@ -54,7 +63,13 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         toolbar.setNavigationOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-//                Snackbar snackbar=Snackbar.make(view,"提示",Snackbar.LENGTH_LONG);
+
+                drawer.openDrawer(Gravity.LEFT);
+            }
+        });
+
+    }
+    //                Snackbar snackbar=Snackbar.make(view,"提示",Snackbar.LENGTH_LONG);
 //                snackbar.setAction("关闭", new View.OnClickListener() {
 //                    @Override
 //                    public void onClick(View view) {
@@ -66,12 +81,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 //                // 设置提示框背景色
 //                snackbar.getView().setBackgroundColor(Color.BLUE);
 //                snackbar.show();
-                drawer.openDrawer(Gravity.LEFT);
-            }
-        });
-
-    }
-
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.menu_toolbar_main, menu);
@@ -82,7 +91,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
             case R.id.action_search:
-                Snackbar.make(toolbar, "搜索", Snackbar.LENGTH_LONG).show();
+//                Snackbar.make(toolbar, "搜索", Snackbar.LENGTH_LONG).show();
+                startActivity(new Intent(mContext,ScrollingActivity.class));
                 break;
             case R.id.action_add:
                 Snackbar.make(toolbar, "更多", Snackbar.LENGTH_LONG).show();
