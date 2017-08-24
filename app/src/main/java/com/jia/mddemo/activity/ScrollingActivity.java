@@ -1,4 +1,4 @@
-package com.jia.mddemo;
+package com.jia.mddemo.activity;
 
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
@@ -7,6 +7,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.view.Window;
+
+import com.jia.mddemo.R;
 
 public class ScrollingActivity extends AppCompatActivity {
 
