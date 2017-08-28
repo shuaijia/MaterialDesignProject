@@ -2,6 +2,7 @@ package com.jia.mddemo.activity;
 
 import android.app.Activity;
 import android.os.Bundle;
+import android.support.design.widget.CollapsingToolbarLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Window;
@@ -15,7 +16,8 @@ import com.jia.mddemo.R;
  */
 public class AboutMeActivity extends AppCompatActivity {
 
-    private Toolbar toolbar_me;
+    private Toolbar toolbar;
+    private CollapsingToolbarLayout toolbar_layout;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,8 +25,15 @@ public class AboutMeActivity extends AppCompatActivity {
         supportRequestWindowFeature(Window.FEATURE_NO_TITLE);
         setContentView(R.layout.activity_about_me);
 
-//        toolbar_me= (Toolbar) findViewById(R.id.toolbar_me);
+        toolbar = (Toolbar) findViewById(R.id.toolbar);
+        toolbar_layout= (CollapsingToolbarLayout) findViewById(R.id.toolbar_layout);
 
-//        setSupportActionBar(toolbar_me);
+        toolbar.setTitle("");
+        toolbar.setNavigationIcon(R.mipmap.ic_arrow_back);
+
+        toolbar_layout.setTitle("Jia Shuai");
+
+
+        setSupportActionBar(toolbar);
     }
 }
