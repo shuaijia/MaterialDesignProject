@@ -1,36 +1,40 @@
 package com.jia.mddemo.adapter;
 
-import android.support.v7.widget.RecyclerView;
-import android.view.View;
-import android.view.ViewGroup;
+import android.content.Context;
+import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentManager;
+import android.support.v4.app.FragmentPagerAdapter;
+
+import com.jia.mddemo.fragment.TuijianFragment;
 
 /**
- * Describtion: 主界面适配器
- * Created by jia on 2017/8/21.
+ * Describtion:主界面适配器
+ * Created by jia on 2017/8/29.
  * 人之所以能，是相信能
  */
-public class MainAdapter extends RecyclerView.Adapter<MainAdapter.MainViewHolder> {
+public class MainAdapter extends FragmentPagerAdapter {
 
+    private Context context;
 
-    @Override
-    public MainViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-        return null;
+    private String[] titles={"推荐","新闻","视频","美图"};
+
+    public MainAdapter(FragmentManager fm, Context context) {
+        super(fm);
+        this.context=context;
     }
 
     @Override
-    public int getItemCount() {
-        return 0;
+    public Fragment getItem(int position) {
+        return new TuijianFragment();
     }
 
     @Override
-    public void onBindViewHolder(MainViewHolder holder, int position) {
-
+    public int getCount() {
+        return 4;
     }
 
-    public class MainViewHolder extends RecyclerView.ViewHolder{
-
-        public MainViewHolder(View itemView) {
-            super(itemView);
-        }
+    @Override
+    public CharSequence getPageTitle(int position) {
+        return titles[position];
     }
 }
