@@ -10,7 +10,6 @@ import android.support.design.widget.Snackbar;
 import android.support.design.widget.TabLayout;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentPagerAdapter;
-import android.support.v4.view.PagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.AppCompatActivity;
@@ -23,9 +22,8 @@ import android.view.View;
 import android.view.Window;
 
 import com.jia.mddemo.R;
-import com.jia.mddemo.adapter.MainAdapter;
 import com.jia.mddemo.fragment.BeijingFragment;
-import com.jia.mddemo.fragment.NewsFragment;
+import com.jia.mddemo.fragment.SportsFragment;
 import com.jia.mddemo.fragment.PictureFragment;
 import com.jia.mddemo.fragment.TuijianFragment;
 import com.jia.mddemo.fragment.VideoFragment;
@@ -64,14 +62,14 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         vp_content.setAdapter(new FragmentPagerAdapter(getSupportFragmentManager()) {
 
-            private String[] titles={"推荐","新闻","视频","美图","北京"};
+            private String[] titles={"推荐","体育","视频","美图","北京"};
 
             @Override
             public Fragment getItem(int position) {
                 if(position==0){
                     return new TuijianFragment();
                 }else if(position==1){
-                    return new NewsFragment();
+                    return new SportsFragment();
                 }else if(position==2){
                     return new VideoFragment();
                 }else if(position==3){

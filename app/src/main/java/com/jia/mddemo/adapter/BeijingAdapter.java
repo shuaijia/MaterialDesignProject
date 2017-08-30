@@ -27,7 +27,7 @@ public class BeijingAdapter extends RecyclerView.Adapter<BeijingAdapter.TuijianV
 
     @Override
     public TuijianViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_tuijian, parent,false);
+        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_beijing, parent,false);
         return new TuijianViewHolder(view);
     }
 
