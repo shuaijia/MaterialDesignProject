@@ -10,13 +10,14 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.jia.mddemo.R;
+import com.jia.mddemo.adapter.BeijingAdapter;
 
 /**
- * Describtion: 推荐界面
- * Created by jia on 2017/8/29.
+ * Describtion:
+ * Created by jia on 2017/8/30.
  * 人之所以能，是相信能
  */
-public class TuijianFragment extends Fragment {
+public class BeijingFragment extends Fragment {
 
     private RecyclerView rv_tuijian_content;
 
@@ -33,8 +34,8 @@ public class TuijianFragment extends Fragment {
         super.onViewCreated(view, savedInstanceState);
         rv_tuijian_content=view.findViewById(R.id.rv_tuijian_content);
 
-//        TuijianAdapter adapter=new TuijianAdapter(getActivity());
-//        rv_tuijian_content.setLayoutManager(new LinearLayoutManager(getActivity()));
-//        rv_tuijian_content.setAdapter(adapter);
+        BeijingAdapter adapter=new BeijingAdapter(getActivity());
+        rv_tuijian_content.setLayoutManager(new LinearLayoutManager(getActivity()));
+        rv_tuijian_content.setAdapter(adapter);
     }
 }

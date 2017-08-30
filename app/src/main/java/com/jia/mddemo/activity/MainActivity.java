@@ -24,6 +24,7 @@ import android.view.Window;
 
 import com.jia.mddemo.R;
 import com.jia.mddemo.adapter.MainAdapter;
+import com.jia.mddemo.fragment.BeijingFragment;
 import com.jia.mddemo.fragment.NewsFragment;
 import com.jia.mddemo.fragment.PictureFragment;
 import com.jia.mddemo.fragment.TuijianFragment;
@@ -63,7 +64,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         vp_content.setAdapter(new FragmentPagerAdapter(getSupportFragmentManager()) {
 
-            private String[] titles={"推荐","新闻","视频","美图"};
+            private String[] titles={"推荐","新闻","视频","美图","北京"};
 
             @Override
             public Fragment getItem(int position) {
@@ -73,14 +74,16 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                     return new NewsFragment();
                 }else if(position==2){
                     return new VideoFragment();
-                }else{
+                }else if(position==3){
                     return new PictureFragment();
+                }else {
+                    return new BeijingFragment();
                 }
             }
 
             @Override
             public int getCount() {
-                return 4;
+                return 5;
             }
 
             @Override
