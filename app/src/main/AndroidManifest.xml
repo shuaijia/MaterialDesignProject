@@ -55,7 +55,9 @@
             </intent-filter>
         </receiver>
 
-        <activity android:name=".activity.SearchActivity"></activity>
+        <activity android:name=".activity.SearchActivity"
+            android:label="@string/title_activity_detail"
+            android:theme="@style/SeachViewActivityTheme"></activity>
     </application>
 
 </manifest>

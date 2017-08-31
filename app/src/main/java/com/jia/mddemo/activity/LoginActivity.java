@@ -61,7 +61,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
         public void handleMessage(Message msg) {
             super.handleMessage(msg);
             if (msg.what == 1) {
-                progress = progress + 30;
+                progress = progress + 50;
                 pb_login.setProgress(progress);
                 if (progress >= 100) {
                     startActivity(new Intent(mContext, MainActivity.class));
