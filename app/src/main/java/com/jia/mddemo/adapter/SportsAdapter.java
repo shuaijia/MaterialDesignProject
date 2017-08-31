@@ -1,6 +1,8 @@
 package com.jia.mddemo.adapter;
 
 import android.content.Context;
+import android.content.Intent;
+import android.support.v7.widget.CardView;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -10,6 +12,7 @@ import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
 import com.jia.mddemo.R;
+import com.jia.mddemo.activity.DetailActivity;
 import com.jia.mddemo.domain.Sports;
 
 import java.util.List;
@@ -36,7 +39,7 @@ public class SportsAdapter extends RecyclerView.Adapter<SportsAdapter.SportsView
     }
 
     @Override
-    public void onBindViewHolder(SportsViewHolder holder, int position) {
+    public void onBindViewHolder(SportsViewHolder holder, final int position) {
         holder.tv_sports_title.setText(list.get(position).getTitle() + "");
         holder.tv_sports_desc.setText(list.get(position).getDescription()+"");
         Glide.with(context)
@@ -44,6 +47,15 @@ public class SportsAdapter extends RecyclerView.Adapter<SportsAdapter.SportsView
                 .placeholder(R.drawable.bg)
                 .error(R.drawable.bg)
                 .into(holder.iv_sports_img);
+
+        holder.cv_sports.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent=new Intent(context, DetailActivity.class);
+                intent.putExtra("url",list.get(position).getUrl());
+                context.startActivity(intent);
+            }
+        });
     }
 
     @Override
@@ -53,12 +65,14 @@ public class SportsAdapter extends RecyclerView.Adapter<SportsAdapter.SportsView
 
     class SportsViewHolder extends RecyclerView.ViewHolder {
 
+        CardView cv_sports;
         ImageView iv_sports_img;
         TextView tv_sports_title;
         TextView tv_sports_desc;
 
         public SportsViewHolder(View itemView) {
             super(itemView);
+            cv_sports=itemView.findViewById(R.id.cv_sports);
             iv_sports_img = itemView.findViewById(R.id.iv_sports_img);
             tv_sports_title = itemView.findViewById(R.id.tv_sports_title);
             tv_sports_desc = itemView.findViewById(R.id.tv_sports_desc);
