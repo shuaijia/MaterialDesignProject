@@ -103,7 +103,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
             case R.id.action_search:
-                Snackbar.make(toolbar, "搜索", Snackbar.LENGTH_LONG).show();
+                startActivity(new Intent(MainActivity.this,SearchActivity.class));
                 break;
             case R.id.action_add:
                 Snackbar.make(toolbar, "更多", Snackbar.LENGTH_LONG).show();
