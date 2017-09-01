@@ -18,106 +18,106 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:padding="8dp"
-        app:flexWrap="wrap"
-        app:alignItems="center"
         app:alignContent="flex_start"
+        app:alignItems="center"
         app:flexDirection="row"
+        app:flexWrap="wrap"
         app:justifyContent="flex_start">
+
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="35dp"
-            android:paddingLeft="15dp"
-            android:paddingRight="15dp"
             android:layout_margin="5dp"
-            app:layout_alignSelf="flex_start"
-            android:text="程序员"
-            android:gravity="center"
-            android:textColor="#8bc34a"
             android:background="@drawable/shape_tag_item"
-            />
+            android:gravity="center"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:text="程序员"
+            android:textColor="#8bc34a"
+            app:layout_alignSelf="flex_start" />
+
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="35dp"
+            android:layout_margin="5dp"
+            android:background="@drawable/shape_tag_item"
+            android:gravity="center"
             android:paddingLeft="15dp"
             android:paddingRight="15dp"
-            android:layout_margin="5dp"
-            app:layout_alignSelf="flex_start"
             android:text="散文"
-            android:gravity="center"
             android:textColor="#8bc34a"
-            android:background="@drawable/shape_tag_item"
-            />
+            app:layout_alignSelf="flex_start" />
+
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="35dp"
+            android:layout_margin="5dp"
+            android:background="@drawable/shape_tag_item"
+            android:gravity="center"
             android:paddingLeft="15dp"
             android:paddingRight="15dp"
-            android:layout_margin="5dp"
-            app:layout_alignSelf="flex_start"
             android:text="程序员"
-            android:gravity="center"
             android:textColor="#8bc34a"
-            android:background="@drawable/shape_tag_item"
-            />
+            app:layout_alignSelf="flex_start" />
+
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="35dp"
+            android:layout_margin="5dp"
+            android:background="@drawable/shape_tag_item"
+            android:gravity="center"
             android:paddingLeft="15dp"
             android:paddingRight="15dp"
-            android:layout_margin="5dp"
-            app:layout_alignSelf="flex_start"
             android:text="IT"
-            android:gravity="center"
             android:textColor="#8bc34a"
-            android:background="@drawable/shape_tag_item"
-            />
+            app:layout_alignSelf="flex_start" />
+
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="35dp"
+            android:layout_margin="5dp"
+            android:background="@drawable/shape_tag_item"
+            android:gravity="center"
             android:paddingLeft="15dp"
             android:paddingRight="15dp"
-            android:layout_margin="5dp"
-            app:layout_alignSelf="flex_start"
             android:text="苹果"
-            android:gravity="center"
             android:textColor="#8bc34a"
-            android:background="@drawable/shape_tag_item"
-            />
+            app:layout_alignSelf="flex_start" />
+
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="35dp"
+            android:layout_margin="5dp"
+            android:background="@drawable/shape_tag_item"
+            android:gravity="center"
             android:paddingLeft="15dp"
             android:paddingRight="15dp"
-            android:layout_margin="5dp"
-            app:layout_alignSelf="flex_start"
             android:text="艺术家的那些事"
-            android:gravity="center"
             android:textColor="#8bc34a"
-            android:background="@drawable/shape_tag_item"
-            />
+            app:layout_alignSelf="flex_start" />
+
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="35dp"
+            android:layout_margin="5dp"
+            android:background="@drawable/shape_tag_item"
+            android:gravity="center"
             android:paddingLeft="15dp"
             android:paddingRight="15dp"
-            android:layout_margin="5dp"
-            app:layout_alignSelf="flex_start"
             android:text="自然探索"
-            android:gravity="center"
             android:textColor="#8bc34a"
-            android:background="@drawable/shape_tag_item"
-            />
+            app:layout_alignSelf="flex_start" />
+
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="35dp"
+            android:layout_margin="5dp"
+            android:background="@drawable/shape_tag_item"
+            android:gravity="center"
             android:paddingLeft="15dp"
             android:paddingRight="15dp"
-            android:layout_margin="5dp"
-            app:layout_alignSelf="flex_start"
             android:text="大北京"
-            android:gravity="center"
             android:textColor="#8bc34a"
-            android:background="@drawable/shape_tag_item"
-            />
+            app:layout_alignSelf="flex_start" />
     </com.google.android.flexbox.FlexboxLayout>
 </LinearLayout>
