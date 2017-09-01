@@ -180,6 +180,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                         startActivity(new Intent(mContext,AboutMeActivity.class));
 
                         break;
+                    case R.id.nav_palette:
+
+                        startActivity(new Intent(mContext,PaletteActivity.class));
+
+                        break;
                 }
                 return false;
             }

@@ -18,6 +18,10 @@
             android:title="Send" />
     </group>
 
+    <item android:title="Palette"
+        android:id="@+id/nav_palette"
+        android:icon="@drawable/ic_menu_manage"/>
+
     <item android:title="more">
         <menu>
             <item

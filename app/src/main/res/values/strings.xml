@@ -111,4 +111,5 @@
         "when a user tries to pick up one of cards.\n\n"
     </string>
     <string name="title_activity_detail">DetailActivity</string>
+    <string name="title_activity_palette">PaletteActivity</string>
 </resources>

@@ -32,4 +32,5 @@ dependencies {
     compile 'com.squareup.retrofit2:converter-gson:2.0.0-beta4'
     compile 'com.squareup.retrofit2:adapter-rxjava:2.0.0-beta4'
     compile 'com.google.android:flexbox:0.2.5'
+    compile 'com.android.support:palette-v7:26.0.0-alpha1'
 }
