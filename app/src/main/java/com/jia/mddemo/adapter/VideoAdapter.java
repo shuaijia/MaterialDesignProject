@@ -14,6 +14,8 @@ import com.jia.mddemo.video.listener.OnVideoControlListener;
 import com.jia.mddemo.video.utils.DisplayUtils;
 import com.jia.mddemo.video.video.JsPlayer;
 
+import java.util.HashMap;
+import java.util.Iterator;
 import java.util.List;
 
 /**
@@ -25,6 +27,8 @@ public class VideoAdapter extends RecyclerView.Adapter<VideoAdapter.VideoViewHol
 
     private Context context;
     private List<VideoInfo> list;
+
+    private HashMap<Integer, JsPlayer> players = new HashMap<>();
 
     public VideoAdapter(Context context, List<VideoInfo> list) {
         this.context = context;
@@ -39,6 +43,10 @@ public class VideoAdapter extends RecyclerView.Adapter<VideoAdapter.VideoViewHol
 
     @Override
     public void onBindViewHolder(final VideoViewHolder holder, final int position) {
+
+        if(!players.containsKey(position)){
+            players.put(position,holder.player);
+        }
 
         holder.player.setOnVideoControlListener(new OnVideoControlListener() {
             @Override
@@ -58,6 +66,7 @@ public class VideoAdapter extends RecyclerView.Adapter<VideoAdapter.VideoViewHol
         });
 
         holder.player.setPath(list.get(position));
+
     }
 
     @Override
@@ -73,7 +82,7 @@ public class VideoAdapter extends RecyclerView.Adapter<VideoAdapter.VideoViewHol
         public VideoViewHolder(View itemView) {
             super(itemView);
             player = itemView.findViewById(R.id.player);
-            ll_video_content=itemView.findViewById(R.id.ll_video_content);
+            ll_video_content = itemView.findViewById(R.id.ll_video_content);
         }
     }
 }

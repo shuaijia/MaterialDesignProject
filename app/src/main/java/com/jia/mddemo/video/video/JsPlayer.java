@@ -220,6 +220,7 @@ public class JsPlayer extends VideoBehaviorView {
             isBackgroundPause = true;
             mMediaPlayer.pause();
         }
+        rl_pre.setVisibility(View.VISIBLE);
     }
 
     public void onStart() {
