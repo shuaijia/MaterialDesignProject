@@ -11,7 +11,7 @@
         android:layout_width="match_parent"
         android:layout_height="400dp"
         android:background="@drawable/shape_about_me"
-        app:contour_style="Sand"
+        app:contour_style="Clouds"
         app:shader_endcolor="@color/endcolor"
         app:shader_mode="RadialGradient"
         app:shader_startcolor="@color/startcolor"
@@ -37,9 +37,4 @@
         android:layout_marginTop="10dp"
         android:layout_marginLeft="20dp"/>
 
-    <View
-        android:layout_width="match_parent"
-        android:layout_height="1dp"
-        android:background="#dddddd"
-        android:layout_alignParentBottom="true"/>
 </RelativeLayout>
