@@ -32,7 +32,7 @@ public class AboutMeActivity extends AppCompatActivity {
         toolbar.setTitle("");
         toolbar.setNavigationIcon(R.mipmap.ic_arrow_back);
 
-        toolbar_layout.setTitle("Jia Shuai");
+        toolbar_layout.setTitle("");
 
 
         setSupportActionBar(toolbar);

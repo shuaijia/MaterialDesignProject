@@ -9,6 +9,10 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
+import com.jia.mddemo.R;
+
+import tv.danmaku.ijk.media.player.IjkMediaPlayer;
+
 /**
  * Describtion:
  * Created by jia on 2017/8/29.
@@ -16,13 +20,11 @@ import android.widget.TextView;
  */
 public class VideoFragment extends Fragment {
 
+    private IjkMediaPlayer ijkMediaPlayer;
+
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        TextView view=new TextView(getActivity());
-        view.setLayoutParams(new ViewGroup.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT));
-        view.setGravity(Gravity.CENTER);
-        view.setText("敬请期待");
-        return view;
+        return inflater.inflate(R.layout.fragment_video, container,false);
     }
 }

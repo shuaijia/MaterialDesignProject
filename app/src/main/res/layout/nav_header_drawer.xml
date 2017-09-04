@@ -1,40 +1,45 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="200dp"
-    android:background="@drawable/side_nav_bar"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:gravity="bottom"
     android:orientation="vertical"
-    android:paddingBottom="@dimen/activity_vertical_margin"
-    android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
     android:theme="@style/ThemeOverlay.AppCompat.Dark">
+
+    <com.ocnyang.contourview.ContourView
+        android:layout_width="match_parent"
+        android:layout_height="400dp"
+        android:background="@drawable/shape_about_me"
+        app:contour_style="Sand"
+        app:shader_endcolor="@color/endcolor"
+        app:shader_mode="RadialGradient"
+        app:shader_startcolor="@color/startcolor"
+        app:shader_style="Center"
+        app:smoothness="0.2" />
 
     <com.jia.mddemo.view.CircularImage
         android:id="@+id/iv_head"
         android:layout_width="60dp"
         android:layout_height="60dp"
         android:scaleType="fitXY"
-        android:src="@mipmap/head" />
+        android:src="@mipmap/head"
+        android:layout_marginTop="80dp"
+        android:layout_marginLeft="20dp"/>
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="5dp"
-        android:text="Shuai Jia"
-        android:textAppearance="@style/TextAppearance.AppCompat.Body2" />
+        android:text="Jia Shuai"
+        android:layout_below="@id/iv_head"
+        android:textSize="20sp"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="20dp"/>
 
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="https://github.com/shuaijia" />
-
-    <TextView
-        android:id="@+id/textView2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="http://blog.csdn.net/jiashuai94" />
-
-</LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#dddddd"
+        android:layout_alignParentBottom="true"/>
+</RelativeLayout>
