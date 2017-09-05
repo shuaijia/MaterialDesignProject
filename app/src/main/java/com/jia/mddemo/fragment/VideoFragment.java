@@ -43,6 +43,7 @@ public class VideoFragment extends Fragment {
         List<VideoInfo> list = new ArrayList<>();
         for (int i = 0; i < 4; i++) {
             VideoInfo info = new VideoInfo("艺术人生", "http://baobab.wdjcdn.com/1455782903700jy.mp4 ");
+//            VideoInfo info = new VideoInfo("艺术人生", "http://hzph.p.webtrn.cn/learnspace/incoming/localhost/video/20170715/1500086857492-8.mp4");
             list.add(info);
 
         }
