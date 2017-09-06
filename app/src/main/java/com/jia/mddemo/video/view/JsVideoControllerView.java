@@ -244,7 +244,7 @@ public class JsVideoControllerView extends FrameLayout {
     };
 
     /**
-     * 异步操作显示？？？？？
+     * 异步操作显示
      */
     private final Runnable mShowProgress = new Runnable() {
         @Override
