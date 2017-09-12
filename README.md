@@ -1,6 +1,7 @@
 # MaterialDesignDemo
 ## MaterialDesign风格项目
 ![CSDN图标](https://github.com/shuaijia/MaterialDesignDemo/blob/master/img/md.png "这是CSDN的图标")
+<img width="150" height="150" src=https://github.com/shuaijia/MaterialDesignDemo/blob/master/img/md.png"/>
 --------------------------------------
 ![CSDN图标](https://raw.githubusercontent.com/shuaijia/MaterialDesignProject/master/img/a.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/200)
 ![CSDN图标](https://raw.githubusercontent.com/shuaijia/MaterialDesignProject/master/img/b.png "这是CSDN的图标")
