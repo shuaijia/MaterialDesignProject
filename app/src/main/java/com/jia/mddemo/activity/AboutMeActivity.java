@@ -1,6 +1,5 @@
 package com.jia.mddemo.activity;
 
-import android.app.Activity;
 import android.os.Bundle;
 import android.support.design.widget.CollapsingToolbarLayout;
 import android.support.v7.app.AppCompatActivity;

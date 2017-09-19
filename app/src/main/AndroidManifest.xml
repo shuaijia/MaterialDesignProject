@@ -66,10 +66,6 @@
             android:name=".activity.PaletteActivity"
             android:label="@string/title_activity_palette"
             android:theme="@style/AppTheme.NoActionBar"></activity>
-        <activity
-            android:name=".activity.CollapsingToolbarActivity"
-            android:label="@string/title_activity_palette"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 
 </manifest>
