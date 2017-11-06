@@ -39,6 +39,7 @@
                 android:textColor="#111111"
                 android:textSize="18sp"/>
 
+
             <TextView
                 android:id="@+id/tv_tuijian_time"
                 android:layout_width="wrap_content"
