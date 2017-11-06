@@ -37,7 +37,7 @@
                 android:maxLines="2"
                 android:text="新闻标题"
                 android:textColor="#111111"
-                android:textSize="18sp" />
+                android:textSize="18sp"/>
 
             <TextView
                 android:id="@+id/tv_tuijian_time"
