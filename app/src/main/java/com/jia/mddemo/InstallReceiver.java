@@ -25,13 +25,14 @@ public class InstallReceiver extends BroadcastReceiver {
         switch (action) {
             // 检测到应用卸载
             case Intent.ACTION_PACKAGE_REMOVED:
+
                 Log.e(TAG, "onReceive: 卸载");
 
                 break;
             // 检测到应用被替换
             case Intent.ACTION_PACKAGE_REPLACED:
-                Log.e(TAG, "onReceive: 替换");
 
+                Log.e(TAG, "onReceive: 替换");
 
                 break;
             // 检测到安装应用
