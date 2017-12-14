@@ -27,17 +27,26 @@ android {
 
     productFlavors {
 
-        gaunwang{}
+        gaunwang{
+            manifestPlaceholders = [
+                    umeng_key   : "572ff0e467e58eb2420013fb",
+                    umeng_channel   : "gaunwang",
+            ]
+        }
 
-        huawei{}
+        huawei{
+            manifestPlaceholders = [
+                    umeng_key   : "572ff0e467e58eb2420013fb",
+                    umeng_channel   : "huawei",
+            ]
+        }
 
-        tencent{}
-
-        baidu{}
-
-        xiaomi{}
-
-        wandoujia{}
+        tencent{
+            manifestPlaceholders = [
+                    umeng_key   : "572ff0e467e58eb2420013fb",
+                    umeng_channel   : "tencent",
+            ]
+        }
 
     }
 }
