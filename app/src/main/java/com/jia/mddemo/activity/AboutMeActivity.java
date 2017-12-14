@@ -17,6 +17,7 @@ import com.jia.mddemo.R;
 public class AboutMeActivity extends AppCompatActivity {
 
     private Toolbar toolbar;
+
     private CollapsingToolbarLayout toolbar_layout;
 
     @Override
