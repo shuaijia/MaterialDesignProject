@@ -18,7 +18,7 @@ import com.jia.mddemo.domain.Sports;
 import java.util.List;
 
 /**
- * Describtion:
+ * Description:
  * Created by jia on 2017/8/30.
  * 人之所以能，是相信能
  */

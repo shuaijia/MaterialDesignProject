@@ -8,7 +8,7 @@ import android.support.v4.app.FragmentPagerAdapter;
 import com.jia.mddemo.fragment.TuijianFragment;
 
 /**
- * Describtion:主界面适配器
+ * Description:主界面适配器
  * Created by jia on 2017/8/29.
  * 人之所以能，是相信能
  */

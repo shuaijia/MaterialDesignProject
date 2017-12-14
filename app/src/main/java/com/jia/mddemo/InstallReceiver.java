@@ -6,7 +6,7 @@ import android.content.Intent;
 import android.util.Log;
 
 /**
- * Describtion: 卸载app的广播接收器
+ * Description: 卸载app的广播接收器
  * Created by jia on 2017/8/31.
  * 人之所以能，是相信能
  */

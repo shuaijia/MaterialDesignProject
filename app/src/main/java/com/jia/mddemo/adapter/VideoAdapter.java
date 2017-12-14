@@ -19,7 +19,7 @@ import java.util.Iterator;
 import java.util.List;
 
 /**
- * Describtion:视频界面适配器
+ * Description:视频界面适配器
  * Created by jia on 2017/9/4.
  * 人之所以能，是相信能
  */

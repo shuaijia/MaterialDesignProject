@@ -1,7 +1,7 @@
 package com.jia.mddemo.video.bean;
 
 /**
- * Describtion：
+ * Description：
  * Created by jia on 2017/9/2.
  * 滴水穿石，非一日之功
  */

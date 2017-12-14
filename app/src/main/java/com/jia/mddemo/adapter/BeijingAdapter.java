@@ -13,7 +13,7 @@ import com.bumptech.glide.Glide;
 import com.jia.mddemo.R;
 
 /**
- * Describtion:
+ * Description:
  * Created by jia on 2017/8/29.
  * 人之所以能，是相信能
  */
