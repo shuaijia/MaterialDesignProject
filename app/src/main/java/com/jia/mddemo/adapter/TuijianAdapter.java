@@ -34,7 +34,7 @@ public class TuijianAdapter extends RecyclerView.Adapter<TuijianAdapter.TuijianV
     }
 
     public void addData(List<Tuijian.NewslistBean> list) {
-        this.list=list;
+        this.list = list;
     }
 
     @Override
@@ -46,7 +46,7 @@ public class TuijianAdapter extends RecyclerView.Adapter<TuijianAdapter.TuijianV
     @Override
     public void onBindViewHolder(TuijianViewHolder holder, final int position) {
         holder.tv_tuijian_title.setText(list.get(position).getTitle() + "");
-        holder.tv_tuijian_time.setText(list.get(position).getCtime()+"");
+        holder.tv_tuijian_time.setText(list.get(position).getCtime() + "");
         Glide.with(context)
                 .load(list.get(position).getPicUrl() + "")
                 .placeholder(R.drawable.bg)
@@ -56,8 +56,8 @@ public class TuijianAdapter extends RecyclerView.Adapter<TuijianAdapter.TuijianV
         holder.cv_tuijian.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent=new Intent(context, DetailActivity.class);
-                intent.putExtra("url",list.get(position).getUrl());
+                Intent intent = new Intent(context, DetailActivity.class);
+                intent.putExtra("url", list.get(position).getUrl());
                 context.startActivity(intent);
             }
         });
@@ -77,11 +77,11 @@ public class TuijianAdapter extends RecyclerView.Adapter<TuijianAdapter.TuijianV
 
         public TuijianViewHolder(View itemView) {
             super(itemView);
-            this.itemView=itemView;
-            cv_tuijian=itemView.findViewById(R.id.cv_tuijian);
+            this.itemView = itemView;
+            cv_tuijian = itemView.findViewById(R.id.cv_tuijian);
             iv_tuijian = itemView.findViewById(R.id.iv_tuijian);
             tv_tuijian_title = itemView.findViewById(R.id.tv_tuijian_title);
-            tv_tuijian_time=itemView.findViewById(R.id.tv_tuijian_time);
+            tv_tuijian_time = itemView.findViewById(R.id.tv_tuijian_time);
         }
     }
 }
