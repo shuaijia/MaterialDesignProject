@@ -28,32 +28,33 @@ public class TuijianFragment extends Fragment {
 
     private RecyclerView rv_tuijian_content;
 
+    private TuijianAdapter adapter;
 
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        return inflater.inflate(R.layout.fragment_tuijian, container,false);
+        return inflater.inflate(R.layout.fragment_tuijian, container, false);
     }
 
     @Override
     public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-        rv_tuijian_content=view.findViewById(R.id.rv_tuijian_content);
+        rv_tuijian_content = view.findViewById(R.id.rv_tuijian_content);
 
         HttpMethod.getInstance().getTuijian(new Subscriber<Tuijian>() {
             @Override
             public void onCompleted() {
-                Log.e(TAG, "onCompleted: " );
+                Log.e(TAG, "onCompleted: ");
             }
 
             @Override
             public void onError(Throwable e) {
-                Log.e(TAG, "onError: " );
+                Log.e(TAG, "onError: ");
             }
 
             @Override
             public void onNext(Tuijian tuijian) {
-                TuijianAdapter adapter = new TuijianAdapter(getActivity());
+                adapter = new TuijianAdapter(getActivity());
                 adapter.addData(tuijian.getNewslist());
                 rv_tuijian_content.setLayoutManager(new LinearLayoutManager(getActivity()));
                 rv_tuijian_content.setAdapter(adapter);

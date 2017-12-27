@@ -19,7 +19,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * Description:
+ * Description: 推荐界面 适配器
  * Created by jia on 2017/8/30.
  * 人之所以能，是相信能
  */
@@ -68,8 +68,8 @@ public class TuijianAdapter extends RecyclerView.Adapter<TuijianAdapter.TuijianV
         return list.size();
     }
 
-    class TuijianViewHolder extends RecyclerView.ViewHolder {
-
+    public class TuijianViewHolder extends RecyclerView.ViewHolder {
+        public View itemView;
         CardView cv_tuijian;
         ImageView iv_tuijian;
         TextView tv_tuijian_title;
@@ -77,6 +77,7 @@ public class TuijianAdapter extends RecyclerView.Adapter<TuijianAdapter.TuijianV
 
         public TuijianViewHolder(View itemView) {
             super(itemView);
+            this.itemView=itemView;
             cv_tuijian=itemView.findViewById(R.id.cv_tuijian);
             iv_tuijian = itemView.findViewById(R.id.iv_tuijian);
             tv_tuijian_title = itemView.findViewById(R.id.tv_tuijian_title);
