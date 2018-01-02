@@ -69,6 +69,7 @@ public class TuijianAdapter extends RecyclerView.Adapter<TuijianAdapter.TuijianV
     }
 
     public class TuijianViewHolder extends RecyclerView.ViewHolder {
+
         public View itemView;
         CardView cv_tuijian;
         ImageView iv_tuijian;
