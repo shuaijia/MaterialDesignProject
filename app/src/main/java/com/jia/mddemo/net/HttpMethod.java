@@ -3,6 +3,7 @@ package com.jia.mddemo.net;
 import android.util.Log;
 
 
+import com.facebook.stetho.okhttp3.StethoInterceptor;
 import com.jia.mddemo.config.Config;
 import com.jia.mddemo.domain.Picture;
 import com.jia.mddemo.domain.Sports;
@@ -54,6 +55,9 @@ public class HttpMethod {
         buidler.readTimeout(TIME_OUT, TimeUnit.SECONDS);
         // 设置重定向 其实默认也是true
         buidler.followRedirects(true);
+
+        // stetho调试
+        buidler.addNetworkInterceptor(new StethoInterceptor());
 
         // 保存cookie
         buidler.addInterceptor(new Interceptor() {

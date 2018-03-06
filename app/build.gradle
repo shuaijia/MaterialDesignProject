@@ -71,4 +71,7 @@ dependencies {
 
     // 通过贝塞尔曲线绘制出的魔炫背景N
     compile 'com.ocnyang:contourview:1.0.0'
+
+    compile 'com.facebook.stetho:stetho:1.5.0'
+    compile 'com.facebook.stetho:stetho-okhttp3:1.5.0'
 }
